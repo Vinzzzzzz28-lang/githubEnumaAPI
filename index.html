@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VAR — Frontend Developer | High-Performance Web Applications</title>
+  <meta name="description" content="VAR is a frontend developer focused on high-performance web applications. React, TypeScript and Next.js specialist with a track record of 40% average load-time reductions and design systems used by 6 product teams.">
+  <meta name="author" content="VAR">
+  <meta name="theme-color" content="#f7f7f4" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0a0e1a" media="(prefers-color-scheme: dark)">
+  <link rel="canonical" href="https://example.com/">
+
+  <!-- Open Graph / social -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="VAR — Frontend Developer | High-Performance Web Applications">
+  <meta property="og:description" content="High-performance web applications, design systems, and measurable UX outcomes. View projects and get in touch.">
+  <meta property="og:url" content="https://example.com/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="VAR — Frontend Developer">
+  <meta name="twitter:description" content="High-performance web applications, design systems, and measurable UX outcomes.">
+
+  <!-- Color scheme: system default. The inline script below prevents a flash of the wrong theme. -->
+  <meta name="color-scheme" content="light dark">
+  <script>
+    try {
+      document.querySelector('meta[name="color-scheme"]').content =
+        localStorage.getItem('color-scheme') || 'light dark';
+    } catch (e) { /* storage blocked — the site still follows the system preference */ }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="assets/css/styles.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "VAR",
+    "jobTitle": "Frontend Developer",
+    "description": "Frontend developer focused on building high-performance web applications.",
+    "email": "mailto:hello@var.dev",
+    "url": "https://example.com/",
+    "sameAs": [
+      "https://www.linkedin.com/in/your-handle",
+      "https://github.com/your-handle"
+    ],
+    "knowsAbout": [
+      "React", "TypeScript", "Next.js", "Tailwind CSS", "Node.js",
+      "Web Performance", "Design Systems", "Accessibility"
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <a class="skip-link" href="#hero">Skip to main content</a>
+
+  <!-- Decorative page-wide grid wash -->
+  <div class="page-wash" aria-hidden="true"></div>
+
+  <!-- ============================ HEADER ============================ -->
+  <header class="site-header" id="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="#hero" aria-label="VAR — back to top">
+        <span class="brand__mark" aria-hidden="true">V</span>
+        <span class="brand__text">VAR</span>
+      </a>
+
+      <nav class="nav" id="primary-nav" aria-label="Primary">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="#skills">Skills</a></li>
+          <li><a class="nav__link" href="#projects">Projects</a></li>
+          <li><a class="nav__link" href="#about">About</a></li>
+          <li><a class="nav__link" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="site-header__actions">
+        <!-- Theme toggle: system default ⇄ explicit override -->
+        <button class="theme-toggle" id="theme-toggle" type="button">
+          <svg class="theme-toggle__icon theme-toggle__icon--sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <circle cx="12" cy="12" r="4.2"/>
+            <path d="M12 2.5v2.2M12 19.3v2.2M4.2 4.2l1.6 1.6M18.2 18.2l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.2 19.8l1.6-1.6M18.2 5.8l1.6-1.6"/>
+          </svg>
+          <svg class="theme-toggle__icon theme-toggle__icon--moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M20.5 14.3A8.5 8.5 0 1 1 9.7 3.5a7 7 0 0 0 10.8 10.8Z"/>
+          </svg>
+          <span class="visually-hidden theme-toggle__text theme-toggle__text--to-dark">Switch to dark theme</span>
+          <span class="visually-hidden theme-toggle__text theme-toggle__text--to-light">Switch to light theme</span>
+        </button>
+
+        <a class="btn btn--primary btn--sm site-header__cta" href="#contact">Hire me</a>
+
+        <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+          <span class="nav-toggle__bars" aria-hidden="true"><span></span><span></span></span>
+        </button>
+      </div>
+    </div>
+    <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+  </header>
+
+  <main id="main">
+    <!-- ============================ HERO ============================ -->
+    <section class="hero" id="hero">
+      <div class="hero__glow" aria-hidden="true"></div>
+      <div class="container hero__inner">
+        <p class="badge reveal">
+          <span class="badge__dot" aria-hidden="true"></span>
+          Available for new roles — Q4 2026
+        </p>
+
+        <h1 class="hero__title reveal">
+          Hi, I'm <span class="hero__name">VAR</span>, a
+          <span class="hero__role">Frontend Developer</span> focused on
+          building <span class="hero__accent">high-performance applications</span>.
+        </h1>
+
+        <p class="hero__sub reveal">
+          <span class="hero__sub-item">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+            Jakarta, Indonesia — open to remote &amp; hybrid
+          </span>
+          <span class="hero__sub-sep" aria-hidden="true"></span>
+          <span class="hero__sub-item">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.2 2"/></svg>
+            Active <time datetime="09:00">09:00</time>–<time datetime="18:00">18:00</time> GMT+7
+          </span>
+          <span class="hero__sub-sep" aria-hidden="true"></span>
+          <span class="hero__sub-item">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16v10H4z"/><path d="m4 8 8 5 8-5"/></svg>
+            hello@var.dev
+          </span>
+        </p>
+
+        <div class="hero__cta reveal">
+          <a class="btn btn--primary" href="#projects">
+            View Projects
+            <svg class="btn__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="btn btn--ghost" href="#contact">Contact Me</a>
+        </div>
+
+        <!-- Recruiter "10-second snapshot" -->
+        <dl class="stats reveal" aria-label="Career at a glance">
+          <div class="stats__item">
+            <dt class="stats__label">Experience</dt>
+            <dd class="stats__value">6<span class="stats__unit">+ yrs</span></dd>
+          </div>
+          <div class="stats__item">
+            <dt class="stats__label">Projects shipped</dt>
+            <dd class="stats__value">25<span class="stats__unit">+</span></dd>
+          </div>
+          <div class="stats__item">
+            <dt class="stats__label">Avg. load-time cut</dt>
+            <dd class="stats__value">40<span class="stats__unit">%</span></dd>
+          </div>
+          <div class="stats__item">
+            <dt class="stats__label">Lighthouse perf</dt>
+            <dd class="stats__value">98<span class="stats__unit">/100</span></dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ============================ SKILLS ============================ -->
+    <section class="section" id="skills" aria-labelledby="skills-title">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="section__eyebrow">02 — Capabilities</p>
+          <h2 class="section__title" id="skills-title">What I bring to the team</h2>
+          <p class="section__lede">
+            A pragmatic toolkit built around fast, accessible interfaces — and the
+            collaboration habits that keep them shipping.
+          </p>
+        </header>
+
+        <div class="skills-grid">
+          <article class="card card--skills reveal">
+            <div class="card__head">
+              <span class="card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="m9 8-5 4 5 4M15 8l5 4-5 4"/></svg>
+              </span>
+              <h3 class="card__title">Technical Skills</h3>
+            </div>
+
+            <div class="skill-group">
+              <h4 class="skill-group__title">Frontend</h4>
+              <ul class="chips">
+                <li class="chip">React</li>
+                <li class="chip">TypeScript</li>
+                <li class="chip">Next.js</li>
+                <li class="chip">Tailwind CSS</li>
+                <li class="chip">HTML5</li>
+                <li class="chip">CSS3</li>
+                <li class="chip">Framer Motion</li>
+                <li class="chip">Vite</li>
+              </ul>
+            </div>
+
+            <div class="skill-group">
+              <h4 class="skill-group__title">Backend &amp; Data</h4>
+              <ul class="chips">
+                <li class="chip">Node.js</li>
+                <li class="chip">Express</li>
+                <li class="chip">PostgreSQL</li>
+                <li class="chip">GraphQL</li>
+                <li class="chip">REST APIs</li>
+              </ul>
+            </div>
+
+            <div class="skill-group">
+              <h4 class="skill-group__title">Tooling &amp; Quality</h4>
+              <ul class="chips">
+                <li class="chip">Git</li>
+                <li class="chip">GitHub Actions</li>
+                <li class="chip">Docker</li>
+                <li class="chip">Playwright</li>
+                <li class="chip">Jest</li>
+                <li class="chip">Figma</li>
+                <li class="chip">Web Vitals</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="card card--skills reveal">
+            <div class="card__head">
+              <span class="card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M3 20a6 6 0 0 1 12 0"/><path d="M16 5.5a3 3 0 0 1 0 5.6M17.5 20a5.6 5.6 0 0 0-2-4.3"/></svg>
+              </span>
+              <h3 class="card__title">Soft Skills &amp; Expertise</h3>
+            </div>
+
+            <ul class="soft-list">
+              <li class="soft-list__item">
+                <span class="soft-list__name">Project Management</span>
+                <span class="soft-list__desc">Scope, roadmap and delivery for cross-functional squads.</span>
+              </li>
+              <li class="soft-list__item">
+                <span class="soft-list__name">Agile / Scrum</span>
+                <span class="soft-list__desc">Comfortable running sprints, retros and stakeholder demos.</span>
+              </li>
+              <li class="soft-list__item">
+                <span class="soft-list__name">UX Design</span>
+                <span class="soft-list__desc">Wireframes to polished UI, with WCAG 2.2 AA as the floor.</span>
+              </li>
+              <li class="soft-list__item">
+                <span class="soft-list__name">Code Review &amp; Mentoring</span>
+                <span class="soft-list__desc">Raised team velocity through pairing and onboarding guides.</span>
+              </li>
+              <li class="soft-list__item">
+                <span class="soft-list__name">Technical Communication</span>
+                <span class="soft-list__desc">Translating engineering trade-offs for non-technical audiences.</span>
+              </li>
+              <li class="soft-list__item">
+                <span class="soft-list__name">Performance Budgeting</span>
+                <span class="soft-list__desc">CI-enforced bundle and Web Vitals budgets per release.</span>
+              </li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ PROJECTS ============================ -->
+    <section class="section section--alt" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="section__eyebrow">03 — Selected work</p>
+          <h2 class="section__title" id="projects-title">Featured projects</h2>
+          <p class="section__lede">
+            Each case study is written in STAR format — situation, task, action, result —
+            so the impact is obvious before you open the link.
+          </p>
+        </header>
+
+        <div class="projects-grid">
+
+          <!-- Project 1 -->
+          <article class="card card--project reveal">
+            <div class="card__media" aria-hidden="true">
+              <span class="card__media-tag">Featured</span>
+              <div class="card__media-art card__media-art--1"></div>
+            </div>
+
+            <div class="card__body">
+              <h3 class="card__title card__title--lg">Northwind Commerce</h3>
+              <p class="card__summary">
+                A storefront rewrite that turned a leaky mobile funnel into the
+                company's fastest-growing channel.
+              </p>
+
+              <dl class="star">
+                <div class="star__row">
+                  <dt class="star__key">S</dt>
+                  <dd class="star__val">Legacy storefront was losing 1 in 3 mobile visitors before checkout.</dd>
+                </div>
+                <div class="star__row">
+                  <dt class="star__key">T</dt>
+                  <dd class="star__val">Cut perceived load time to sub-2s without redesigning the buying flow.</dd>
+                </div>
+                <div class="star__row">
+                  <dt class="star__key">A</dt>
+                  <dd class="star__val">Migrated the catalog to React Server Components with streaming, moved search behind an edge cache, and trimmed the critical path to a 90&nbsp;kB bundle.</dd>
+                </div>
+                <div class="star__row">
+                  <dt class="star__key">R</dt>
+                  <dd class="star__val"><strong>LCP 4.8s → 1.6s (−67%)</strong>, checkout completion up 18%, ≈$1.2M annualized GMV.</dd>
+                </div>
+              </dl>
+
+              <ul class="chips chips--sm" aria-label="Technologies used">
+                <li class="chip">React</li>
+                <li class="chip">Next.js</li>
+                <li class="chip">TypeScript</li>
+                <li class="chip">Tailwind CSS</li>
+                <li class="chip">Node.js</li>
+              </ul>
+
+              <div class="card__actions">
+                <a class="btn btn--primary btn--sm" href="https://example.com/northwind" target="_blank" rel="noopener noreferrer">
+                  Live Demo
+                  <svg class="btn__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 5h5v5M19 5l-8 8M18 14v4a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h4"/></svg>
+                </a>
+                <a class="btn btn--ghost btn--sm" href="https://github.com/your-handle/northwind" target="_blank" rel="noopener noreferrer">
+                  <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12 12 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>
+                  Source Code
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="card card--project reveal">
+            <div class="card__media" aria-hidden="true">
+              <span class="card__media-tag">Live product</span>
+              <div class="card__media-art card__media-art--2"></div>
+            </div>
+
+            <div class="card__body">
+              <h3 class="card__title card__title--lg">Pulse Analytics</h3>
+              <p class="card__summary">
+                One live, trustworthy incident console for engineering teams on call.
+              </p>
+
+              <dl class="star">
+                <div class="star__row">
+                  <dt class="star__key">S</dt>
+                  <dd class="star__val">On-call engineers reconciled incident data by hand across four dashboards.</dd>
+                </div>
+                <div class="star__row">
+                  <dt class="star__key">T</dt>
+                  <dd class="star__val">Deliver a single real-time view that stays accurate under heavy write load.</dd>
+                </div>
+                <div class="star__row">
+                  <dt class="star__key">A</dt>
+                  <dd class="star__val">Built a Node.js ingestion pipeline with WebSocket fan-out and a virtualized React table rendering 100k rows at 60fps.</dd>
+                </div>
+                <div class="star__row">
+                  <dt class="star__key">R</dt>
+                  <dd class="star__val"><strong>Triage time down 70%</strong>, adopted by 6 teams and used for 24/7 on-call since launch.</dd>
+                </div>
+              </dl>
+
+              <ul class="chips chips--sm" aria-label="Technologies used">
+                <li class="chip">React</li>
+                <li class="chip">TypeScript</li>
+                <li class="chip">Node.js</li>
+                <li class="chip">PostgreSQL</li>
+                <li class="chip">WebSockets</li>
+                <li class="chip">Docker</li>
+              </ul>
+
+              <div class="card__actions">
+                <a class="btn btn--primary btn--sm" href="https://example.com/pulse" target="_blank" rel="noopener noreferrer">
+                  Live Demo
+                  <svg class="btn__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 5h5v5M19 5l-8 8M18 14v4a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h4"/></svg>
+                </a>
+                <a class="btn btn--ghost btn--sm" href="https://github.com/your-handle/pulse" target="_blank" rel="noopener noreferrer">
+                  <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12 12 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>
+                  Source Code
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="card card--project reveal">
+            <div class="card__media" aria-hidden="true">
+              <span class="card__media-tag">Open source</span>
+              <div class="card__media-art card__media-art--3"></div>
+            </div>
+
+            <div class="card__body">
+              <h3 class="card__title card__title--lg">Atlas Design System</h3>
+              <p class="card__summary">
+                A single accessible source of truth that four product squads stopped arguing over.
+              </p>
+
+              <dl class="star">
+                <div class="star__row">
+                  <dt class="star__key">S</dt>
+                  <dd class="star__val">Four squads shipped duplicate, visually inconsistent UI components.</dd>
+                </div>
+                <div class="star__row">
+                  <dt class="star__key">T</dt>
+                  <dd class="star__val">Standardise UI quality and accessibility without blocking feature work.</dd>
+                </div>
+                <div class="star__row">
+                  <dt class="star__key">A</dt>
+                  <dd class="star__val">Authored 40+ typed components on a token layer, with native light/dark theming and Storybook + Playwright coverage in CI.</dd>
+                </div>
+                <div class="star__row">
+                  <dt class="star__key">R</dt>
+                  <dd class="star__val"><strong>UI defects down 45%</strong>, feature build time reduced ~30% across all four squads.</dd>
+                </div>
+              </dl>
+
+              <ul class="chips chips--sm" aria-label="Technologies used">
+                <li class="chip">React</li>
+                <li class="chip">TypeScript</li>
+                <li class="chip">Storybook</li>
+                <li class="chip">Playwright</li>
+                <li class="chip">Figma</li>
+              </ul>
+
+              <div class="card__actions">
+                <a class="btn btn--primary btn--sm" href="https://example.com/atlas" target="_blank" rel="noopener noreferrer">
+                  Live Demo
+                  <svg class="btn__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 5h5v5M19 5l-8 8M18 14v4a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h4"/></svg>
+                </a>
+                <a class="btn btn--ghost btn--sm" href="https://github.com/your-handle/atlas" target="_blank" rel="noopener noreferrer">
+                  <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12 12 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>
+                  Source Code
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ ABOUT ============================ -->
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="container about">
+        <header class="section__head section__head--left reveal">
+          <p class="section__eyebrow">04 — About</p>
+          <h2 class="section__title" id="about-title">The person behind the pull requests</h2>
+        </header>
+
+        <div class="about__grid">
+          <div class="about__bio reveal">
+            <p class="about__lead">
+              I'm a frontend developer who spent the last six years turning slow,
+              confusing interfaces into fast, obvious ones — and I care as much about
+              how a team works as I do about the final pixel.
+            </p>
+            <p>
+              My path started in design, drifted into front-end engineering, and settled
+              somewhere in between: I still sketch before I ship, but I measure everything
+              after. I specialise in React and TypeScript codebases that need to scale
+              without losing their personality, and in design systems that survive contact
+              with real product teams.
+            </p>
+            <p>
+              When I'm not profiling a bundle, you'll find me writing onboarding docs for
+              new engineers or arguing (politely) that a 90&nbsp;kB JavaScript budget is a
+              perfectly reasonable thing to enforce in CI.
+            </p>
+          </div>
+
+          <aside class="about__aside reveal" aria-label="Quick facts">
+            <div class="card card--facts">
+              <h3 class="card__title card__title--sm">Quick facts</h3>
+              <dl class="facts">
+                <div class="facts__row">
+                  <dt>Experience</dt>
+                  <dd>6+ years, 3 companies</dd>
+                </div>
+                <div class="facts__row">
+                  <dt>Focus</dt>
+                  <dd>Performance · Design systems</dd>
+                </div>
+                <div class="facts__row">
+                  <dt>Stack</dt>
+                  <dd>React, TypeScript, Next.js, Node.js</dd>
+                </div>
+                <div class="facts__row">
+                  <dt>Languages</dt>
+                  <dd>English (fluent), Indonesian</dd>
+                </div>
+                <div class="facts__row">
+                  <dt>Work style</dt>
+                  <dd>Async-first, documentation heavy</dd>
+                </div>
+              </dl>
+
+              <h3 class="card__title card__title--sm card__title--spaced">How I work</h3>
+              <ul class="principles">
+                <li>Measure before and after — no vanity metrics.</li>
+                <li>Accessibility is part of done, not a follow-up ticket.</li>
+                <li>Leave the codebase calmer than I found it.</li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ CONTACT ============================ -->
+    <section class="section section--contact" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="contact-card reveal">
+          <div class="contact-card__glow" aria-hidden="true"></div>
+          <p class="section__eyebrow section__eyebrow--center">05 — Contact</p>
+          <h2 class="contact-card__title" id="contact-title">Let's collaborate!</h2>
+          <p class="contact-card__lede">
+            I'm currently open to frontend and full-stack roles, plus a small number of
+            freelance projects. If you have a role or a problem that needs solving,
+              reach out — I reply within one business day.
+          </p>
+
+          <div class="contact-card__actions">
+            <a class="btn btn--invert" href="mailto:hello@var.dev">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16v10H4z"/><path d="m4 8 8 5 8-5"/></svg>
+              hello@var.dev
+            </a>
+            <button class="btn btn--outline-invert" type="button" id="copy-email" data-email="hello@var.dev">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" data-icon-copy><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h9"/></svg>
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" data-icon-done hidden><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>
+              <span id="copy-email-label">Copy email</span>
+            </button>
+          </div>
+
+          <p class="visually-hidden" id="copy-email-status" role="status" aria-live="polite"></p>
+
+          <ul class="socials" aria-label="Social profiles">
+            <li>
+              <a class="social" href="https://www.linkedin.com/in/your-handle" target="_blank" rel="noopener noreferrer">
+                <span class="social__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M6.5 9.5V18M6.5 6.2v.1M11 18v-4.6a2.4 2.4 0 0 1 4.8 0V18M11 9.5V18"/><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="4.4"/></svg>
+                </span>
+                <span>LinkedIn</span>
+              </a>
+            </li>
+            <li>
+              <a class="social" href="https://github.com/your-handle" target="_blank" rel="noopener noreferrer">
+                <span class="social__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12 12 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>
+                </span>
+                <span>GitHub</span>
+              </a>
+            </li>
+            <li>
+              <a class="social" href="mailto:hello@var.dev">
+                <span class="social__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M4 7h16v10H4z"/><path d="m4 8 8 5 8-5"/></svg>
+                </span>
+                <span>Email</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================ FOOTER ============================ -->
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <p class="site-footer__copy">
+        © <span id="year">2026</span> VAR. Built with semantic HTML, modern CSS and vanilla JS — no framework.
+      </p>
+      <a class="site-footer__top" href="#hero">
+        Back to top
+        <svg class="btn__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V6M6 11l6-6 6 6"/></svg>
+      </a>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
